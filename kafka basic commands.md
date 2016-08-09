@@ -59,45 +59,45 @@ Kafka uses config from ../config/server.properties
 
 ## Consolen producer ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br>
 ```
 
 ```
 
 ## Show active consumer groups ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br> 
 ```
 
 ```
 
 ## Show current active consumer offset and consumer LAG ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br> 
 ```
 
 ```
 
 ## Show internal topic __TODO ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br> 
 ```
 
 ```
 
 ## Add partitions to an existing topic ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br> 
 ```
 
 ```
