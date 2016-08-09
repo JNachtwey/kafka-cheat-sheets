@@ -8,9 +8,9 @@ Variables are in brackets like {varname}
 
 Kafka uses config from ../config/server.properties
 
-**command:** kafka start
-**command:** kafka stop
-**command:** kakfa status
+**command:** kafka start <br>
+**command:** kafka stop <br>
+**command:** kafka status <br>
 
 ## Create topic ##
 
