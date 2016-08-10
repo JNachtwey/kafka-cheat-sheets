@@ -14,55 +14,66 @@ Kafka uses config from ../config/server.properties
 
 ## Create topic ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** ./kafka-topics.sh --create --topic {topic_name} --replication-factor {#replication-factor} --partitions {#partition} --zookeeper {host}:{port} <br>
+**example:** ./kafka-topics.sh --create --topic topic_name --replication-factor 1 --partitions 10 --zookeeper localhost:2181 <br>
+**expected result:**  
 ```
-
+Created topic "topic_name".
 ```
 
 ## List all topics ##
 
-**command:** 
-**example:** 
+**command:** ./kafka-topics.sh --list --zookeeper  {host}:{port} <br>
+**example:** ./kafka-topics.sh --list --zookeeper  localhost:2181 <br>
 **expected result:** 
 ```
+topic_name
 
 ```
 
 ## Delete a topic ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br> 
 ```
 
 ```
 
 ## Describe a topic ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br>
 ```
-
+Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
+        Topic: topic_name  Partition: 0    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 1    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 2    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 3    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 4    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 5    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 6    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 7    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 8    Leader: 0       Replicas: 0     Isr: 0
+        Topic: topic_name  Partition: 9    Leader: 0       Replicas: 0     Isr: 0
 ```
 
 ## Consolen consumer ##
 
-**command:** 
-**example:** 
-**expected result:** 
+**command:** <br>
+**example:** <br>
+**expected result:** <br>
 ```
 
 ```
 
 ## Consolen producer ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka-console-producer.sh --broker-list {host}:{port} --topic {topic_name}  <br>
+**example:** ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic_name  <br>
 **expected result:** <br>
-```
+```{put your messages hier and return }
 
 ```
 

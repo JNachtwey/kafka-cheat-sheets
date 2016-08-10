@@ -6,12 +6,13 @@ Variables are in brackets like {varname}
 
 ## Consumer perfomance ##
 
-**command:** ./kafka-consumer-perf-test.sh --batch-size {batch-size} --broker-list {host}:{port} --group {group_name} --new-consumer <br>
-**example:** ./kafka-consumer-perf-test.sh --batch-size 1000 --broker-list localhost:9092 --group group_name --new-consumer <br>
+**command:** ./kafka-consumer-perf-test.sh --batch-size {batch-size} --messages {#messages} --broker-list={host}:{port} --topic topic_name --group {group_name} --new-consumer <br>
+**example:** ./kafka-consumer-perf-test.sh --batch-size 1000 --messages 1000 --broker-list=localhost:9092 --topic topic_name --group group_name --new-consumer <br>
 **expected result:** 
 ```
 
 ```
+**remark:** It is necessary to put messages in this topic before you can receive messages with a consumer. Take care of message-size. 
 
 ## Producer perfomance ##
 
@@ -30,13 +31,13 @@ Variables are in brackets like {varname}
 **example:**./kafka-producer-perf-test.sh --broker-list=localhost:9092 --messages 10000000 --topic topic_name --message-size 1000 --batch-size 100 --compression-codec 1 <br>
 **expected result:**
 ```
-
 ```
 
-## Latenz ##
+
+## Latency ##
 
 **command:** ./kafka-run-class.sh kafka.tools.EndToEndLatency {host}:{port} {topic} {#messages} {acks} {message-size} <br>
-**example:**./kafka-run-class.sh kafka.tools.EndToEndLatency localhost:9092 topic 1000 all 400 <br> 
+**example:** ./kafka-run-class.sh kafka.tools.EndToEndLatency localhost:9092 topic_name 1000 all 400 <br> 
 **expected result:**
 ```
 
