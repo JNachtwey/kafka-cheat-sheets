@@ -42,8 +42,8 @@ topic_name
 
 ## Describe a topic ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka-topics.sh --describe --zookeeper {host}:{port} --topic {topic_name} <br>
+**example:** ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic_name <br>
 **expected result:** <br>
 ```
 Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
@@ -63,6 +63,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** <br>
 **example:** <br>
+**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT}
+									  : --consumer.config ./config/client-security.properties // See below for client-security.properties
 **expected result:** <br>
 ```
 
@@ -70,10 +72,12 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Consolen producer ##
 
-**command:** ./kafka-console-producer.sh --broker-list {host}:{port} --topic {topic_name}  <br>
-**example:** ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic_name  <br>
+**command:** ./kafka-console-producer.sh --broker-list {host}:{port} --topic {topic_name} --new-producer<br>
+**example:** ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic_name  --new-producer<br>
+**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT}
+							          : --producer.config ./config/producer.properties // See below for client-security.properties
 **expected result:** <br>
-```{put your messages hier and return }
+```{put your messages hier and return}
 
 ```
 
@@ -109,6 +113,16 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 **command:** <br>
 **example:** <br>
 **expected result:** <br> 
+```
+
+```
+
+## Config for client-security.properties ##
+```
+
+```
+
+## Config for producer.properties ##
 ```
 
 ```
