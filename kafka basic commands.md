@@ -33,8 +33,8 @@ topic_name
 
 ## Delete a topic ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka-topics.sh --zookeeper {host}:{port} --delete --topic {topic_name} <br>
+**example:** ./kafka-topics.sh --zookeeper localhost:2181 --delete --topic weblogs <br>
 **expected result:** <br> 
 ```
 
@@ -63,8 +63,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** <br>
 **example:** <br>
-**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT}
-									  : --consumer.config ./config/client-security.properties // See below for client-security.properties
+**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
+									  : --consumer.config ./config/client-security.properties // See below for client-security.properties <br>
 **expected result:** <br>
 ```
 
@@ -74,8 +74,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** ./kafka-console-producer.sh --broker-list {host}:{port} --topic {topic_name} --new-producer<br>
 **example:** ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic_name  --new-producer<br>
-**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT}
-							          : --producer.config ./config/producer.properties // See below for client-security.properties
+**options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
+							          : --producer.config ./config/producer.properties // See below for client-security.properties <br>
 **expected result:** <br>
 ```{put your messages hier and return}
 
@@ -83,8 +83,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Show active consumer groups ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server {host}:{port}<br>
+**example:** ./kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server localhost:9092<br>
 **expected result:** <br> 
 ```
 
@@ -92,8 +92,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Show current active consumer offset and consumer LAG ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka.admin.ConsumerGroupCommand --decribe --new-consumer --bootstrap-server {host}:{port} --group group_name<br>
+**example:** ./kafka.admin.ConsumerGroupCommand --decribe --new-consumer --bootstrap-server localhost:9092 --group group_name<br>
 **expected result:** <br> 
 ```
 
@@ -110,8 +110,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Add partitions to an existing topic ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka-topics.sh --alter --zookeeper {host}:{port} --topic {topic_name} --partitions {#partitions} <br>
+**example:** ./kafka-topics.sh --alter --zookeeper localhost:2181 --topic topic_name --partitions 4 <br>
 **expected result:** <br> 
 ```
 
