@@ -9,7 +9,7 @@ Variables are in brackets like {varname}
 **command:** ./kafka-consumer-perf-test.sh --batch-size {batch-size} --messages {#messages} --broker-list={host}:{port} --topic topic_name --group {group_name} --new-consumer <br>
 **example:** ./kafka-consumer-perf-test.sh --batch-size 1000 --messages 1000 --broker-list=localhost:9092 --topic topic_name --group group_name --new-consumer --num-fetch-threads 10<br>
 **options:** 
-To show stats during the test: --reporting-interval {#messages} --show-detailed-stats
+To show stats during the test: --reporting-interval {#messages} --show-detailed-stats <br> 
 **expected result:** 
 ```
 time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec

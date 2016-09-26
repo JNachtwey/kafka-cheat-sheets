@@ -1,6 +1,6 @@
 # Kafka basic commands
 
-You will find all programms in bin dir. Tested under apache kafka version 0.9. [Apache Kafka](https://kafka.apache.org/)
+You will find all programms in bin dir. Tested under [Apache Kafka](https://kafka.apache.org/) version 0.9.
 Variables are in brackets like {varname}
 
 
@@ -28,7 +28,6 @@ Created topic "topic_name".
 **expected result:** 
 ```
 topic_name
-
 ```
 
 ## Delete a topic ##
@@ -83,8 +82,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Show active consumer groups ##
 
-**command:** ./kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server {host}:{port}<br>
-**example:** ./kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server localhost:9092<br>
+**command:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server {host}:{port}<br>
+**example:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server localhost:9092<br>
 **expected result:** <br> 
 ```
 
@@ -92,8 +91,8 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Show current active consumer offset and consumer LAG ##
 
-**command:** ./kafka.admin.ConsumerGroupCommand --decribe --new-consumer --bootstrap-server {host}:{port} --group group_name<br>
-**example:** ./kafka.admin.ConsumerGroupCommand --decribe --new-consumer --bootstrap-server localhost:9092 --group group_name<br>
+**command:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server {host}:{port} --group group_name<br>
+**example:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server localhost:9092 --group group_name<br>
 **expected result:** <br> 
 ```
 
