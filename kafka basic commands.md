@@ -16,6 +16,7 @@ Kafka uses config from ../config/server.properties
 
 **command:** ./kafka-topics.sh --create --topic {topic_name} --replication-factor {#replication-factor} --partitions {#partition} --zookeeper {host}:{port} <br>
 **example:** ./kafka-topics.sh --create --topic topic_name --replication-factor 1 --partitions 10 --zookeeper localhost:2181 <br>
+**options:** --config retention_bytes {#bytes} retention_ms {#ms}
 **expected result:**  
 ```
 Created topic "topic_name".
@@ -60,10 +61,11 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 ## Consolen consumer ##
 
-**command:** <br>
-**example:** <br>
+**command:** ./kafka-console-consumer.sh --bootstrap-server {host}:{port} --topic {topic_name} --new-consumer <br>
+**example:** ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic_name --new-consumer<br>
 **options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
 									  : --consumer.config ./config/client-security.properties // See below for client-security.properties <br>
+									    --from-beginning //read all messages from beginning
 **expected result:** <br>
 ```
 

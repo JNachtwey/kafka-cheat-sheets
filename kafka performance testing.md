@@ -1,6 +1,6 @@
 # Kafka performance testing #
 
-You will find all programms in bin dir. Tested under apache kafka version 0.9. [Apache Kafka](https://kafka.apache.org/)
+You will find all programms in bin dir. Tested under [Apache Kafka](https://kafka.apache.org/) version 0.9. <br> 
 Variables are in brackets like {varname}
 
 
@@ -9,7 +9,7 @@ Variables are in brackets like {varname}
 **command:** ./kafka-consumer-perf-test.sh --batch-size {batch-size} --messages {#messages} --broker-list={host}:{port} --topic topic_name --group {group_name} --new-consumer <br>
 **example:** ./kafka-consumer-perf-test.sh --batch-size 1000 --messages 1000 --broker-list=localhost:9092 --topic topic_name --group group_name --new-consumer --num-fetch-threads 10<br>
 **options:** 
-To show stats during the test: --reporting-interval {#messages} --show-detailed-stats <br> 
+To show stats during the test: --reporting-interval {#messages} --show-detailed-stats 
 **expected result:** 
 ```
 time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
