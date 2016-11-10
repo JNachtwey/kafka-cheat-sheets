@@ -16,7 +16,7 @@ Kafka uses config from ../config/server.properties
 
 **command:** ./kafka-topics.sh --create --topic {topic_name} --replication-factor {#replication-factor} --partitions {#partition} --zookeeper {host}:{port} <br>
 **example:** ./kafka-topics.sh --create --topic topic_name --replication-factor 1 --partitions 10 --zookeeper localhost:2181 <br>
-**options:** --config retention_bytes {#bytes} retention_ms {#ms}
+**options:** --config retention.bytes={#bytes} retention.ms={#ms}
 **expected result:**  
 ```
 Created topic "topic_name".
@@ -26,7 +26,7 @@ Created topic "topic_name".
 
 **command:** ./kafka-topics.sh --list --zookeeper  {host}:{port} <br>
 **example:** ./kafka-topics.sh --list --zookeeper  localhost:2181 <br>
-**expected result:** 
+**expected result:**
 ```
 topic_name
 ```
@@ -35,7 +35,7 @@ topic_name
 
 **command:** ./kafka-topics.sh --zookeeper {host}:{port} --delete --topic {topic_name} <br>
 **example:** ./kafka-topics.sh --zookeeper localhost:2181 --delete --topic weblogs <br>
-**expected result:** <br> 
+**expected result:** <br>
 ```
 
 ```
@@ -86,7 +86,7 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server {host}:{port}<br>
 **example:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server localhost:9092<br>
-**expected result:** <br> 
+**expected result:** <br>
 ```
 
 ```
@@ -95,7 +95,7 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server {host}:{port} --group group_name<br>
 **example:** ./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server localhost:9092 --group group_name<br>
-**expected result:** <br> 
+**expected result:** <br>
 ```
 
 ```
@@ -104,7 +104,7 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** <br>
 **example:** <br>
-**expected result:** <br> 
+**expected result:** <br>
 ```
 
 ```
@@ -113,7 +113,7 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:** ./kafka-topics.sh --alter --zookeeper {host}:{port} --topic {topic_name} --partitions {#partitions} <br>
 **example:** ./kafka-topics.sh --alter --zookeeper localhost:2181 --topic topic_name --partitions 4 <br>
-**expected result:** <br> 
+**expected result:** <br>
 ```
 
 ```
