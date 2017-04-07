@@ -16,8 +16,10 @@ Kafka uses config from ../config/server.properties
 
 **command:**
 >./kafka-topics.sh --create --topic {topic_name} --replication-factor {#replication-factor} --partitions {#partition} --zookeeper {host}:{port}
+
 **example:**
 >./kafka-topics.sh --create --topic topic_name --replication-factor 1 --partitions 10 --zookeeper localhost:2181
+
 **options:**
 --config retention.bytes={#bytes} retention.ms={#ms}
 **expected result:**  
@@ -29,8 +31,10 @@ Created topic "topic_name".
 
 **command:**
 >./kafka-topics.sh --list --zookeeper  {host}:{port}
+
 **example:**
 >./kafka-topics.sh --list --zookeeper  localhost:2181
+
 **expected result:**
 ```
 topic_name
@@ -40,8 +44,10 @@ topic_name
 
 **command:**
 >./kafka-topics.sh --zookeeper {host}:{port} --delete --topic {topic_name}
+
 **example:**
 > ./kafka-topics.sh --zookeeper localhost:2181 --delete --topic topic_name
+
 **expected result:**
 ```
 
@@ -51,8 +57,10 @@ topic_name
 
 **command:**
 >./kafka-topics.sh --describe --zookeeper {host}:{port} --topic {topic_name}
+
 **example:**
 >./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic_name
+
 **expected result:**
 ```
 Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
@@ -72,8 +80,10 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:**
 >./kafka-console-consumer.sh --bootstrap-server {host}:{port} --topic {topic_name} --new-consumer
+
 **example:**
 >./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic_name --new-consumer
+
 **options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
 									  : --consumer.config ./config/client-security.properties // See below for client-security.properties <br>
 									    --from-beginning //read all messages from beginning
@@ -86,8 +96,10 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 
 **command:**
 >./kafka-console-producer.sh --broker-list {host}:{port} --topic {topic_name} --new-producer
+
 **example:**
 >./kafka-console-producer.sh --broker-list localhost:9092 --topic topic_name  --new-producer
+
 **options:**
 If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
 							          : --producer.config ./config/producer.properties // See below for client-security.properties <br>
@@ -100,8 +112,10 @@ If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} x
 
 **command:**
 >./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server {host}:{port}
+
 **example:**
 >./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --list --new-consumer --bootstrap-server localhost:9092
+
 **expected result:** <br>
 ```
 
@@ -111,8 +125,10 @@ If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} x
 
 **command:**
 >./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server {host}:{port} --group group_name
+
 **example:**
 >./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server localhost:9092 --group group_name
+
 **expected result:** <br>
 ```
 
@@ -132,9 +148,11 @@ If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} x
 ## Add partitions to an existing topic ##
 
 **command:**
->./kafka-topics.sh --alter --zookeeper {host}:{port} --topic {topic_name} --partitions {#partitions} 
+>./kafka-topics.sh --alter --zookeeper {host}:{port} --topic {topic_name} --partitions {#partitions}
+
 **example:**
 >./kafka-topics.sh --alter --zookeeper localhost:2181 --topic topic_name --partitions 4
+
 **expected result:** <br>
 ```
 
