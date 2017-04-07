@@ -34,9 +34,10 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 ### option 1: kafka.tools.ProducerPerformance (Deprecated in 0.9)###
 
 **command:**
-```
-./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic {topic_name} --num-records  {#num-records} --record-size {record-size} --throughput {testing} --producer-props bootstrap.servers={host}:{port}
-```
+
+>./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance >--topic {topic_name} --num-records  {#num-records} >--record-size {record-size} --throughput {testing} >--producer-props bootstrap.servers={host}:{port}
+
+
 **example:**
 ```
 ./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic topic_name --num-records  5000 --record-size  400 --throughput 1500000 --producer-props bootstrap.servers=localhost:9092
