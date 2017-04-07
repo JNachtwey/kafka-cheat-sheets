@@ -22,6 +22,7 @@ Kafka uses config from ../config/server.properties
 
 **options:**
 --config retention.bytes={#bytes} retention.ms={#ms}
+
 **expected result:**  
 ```
 Created topic "topic_name".
