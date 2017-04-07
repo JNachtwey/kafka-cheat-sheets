@@ -13,7 +13,7 @@ Variables are in brackets like {varname}
 
 **example:**
 ```
-./kafka-consumer-perf-test.sh --batch-size 1000 --messages 1000 --broker-list=localhost:9092 --topic topic_name --group group_name --new-consumer --num-fetch-threads 10<br>
+./kafka-consumer-perf-test.sh --batch-size 1000 --messages 1000 --broker-list=localhost:9092 --topic topic_name --group group_name --new-consumer --num-fetch-threads 10
 ```
 **options:**
 To show stats during the test: --reporting-interval {#messages} --show-detailed-stats
@@ -35,11 +35,11 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **command:**
 ```
-./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic {topic_name} --num-records  {#num-records} --record-size {record-size} --throughput {testing} --producer-props bootstrap.servers={host}:{port} <br>
+./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic {topic_name} --num-records  {#num-records} --record-size {record-size} --throughput {testing} --producer-props bootstrap.servers={host}:{port}
 ```
 **example:**
 ```
-./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic topic_name --num-records  5000 --record-size  400 --throughput 1500000 --producer-props bootstrap.servers=localhost:9092 <br>
+./kafka-run-class.sh org.apache.kafka.tools.ProducerPerformance --topic topic_name --num-records  5000 --record-size  400 --throughput 1500000 --producer-props bootstrap.servers=localhost:9092
 ```
 **expected result:**
 ```
@@ -50,11 +50,11 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **command:**
 ```
-./kafka-producer-perf-test.sh --broker-list={host}:{port} --messages {#messages} --topic {topic_name} --message-size {message-size} --batch-size {batch-size} --compression-codec {compression-codec} <br>
+./kafka-producer-perf-test.sh --broker-list={host}:{port} --messages {#messages} --topic {topic_name} --message-size {message-size} --batch-size {batch-size} --compression-codec {compression-codec}
 ```
 **example:**
 ```
-./kafka-producer-perf-test.sh --broker-list=localhost:9092 --messages 10000000 --topic topic_name --message-size 1000 --batch-size 100 --compression-codec 1 <br>
+./kafka-producer-perf-test.sh --broker-list=localhost:9092 --messages 10000000 --topic topic_name --message-size 1000 --batch-size 100 --compression-codec 1
 ```
 **expected result:**
 ```
@@ -67,8 +67,11 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **command:**
 ```
-./kafka-run-class.sh kafka.tools.EndToEndLatency {host}:{port} {topic} {#messages} {acks} {message-size} <br>
-**example:** ./kafka-run-class.sh kafka.tools.EndToEndLatency localhost:9092 topic_name 1000 all 400 <br>
+./kafka-run-class.sh kafka.tools.EndToEndLatency {host}:{port} {topic} {#messages} {acks} {message-size}
+```
+**example:**
+```
+./kafka-run-class.sh kafka.tools.EndToEndLatency localhost:9092 topic_name 1000 all 400
 ```
 **expected result:**
 ```
