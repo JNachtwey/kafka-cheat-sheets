@@ -58,13 +58,13 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **expected result:**
 ```
-start.time, 	 			end.time, compression, message.size, batch.size, total.data.sent.in.MB, MB.sec, total.data.sent.in.nMsg,   nMsg.sec
+start.time, end.time, compression, message.size, batch.size, total.data.sent.in.MB, MB.sec, total.data.sent.in.nMsg,   nMsg.sec
 2016-08-30 13:43:25:926, 2016-08-30 13:43:32:259, 			1,         1000, 		100, 	             95.37, 5.0588,                  100000, 15790.3048
 ```
 
 
 ## Latency ##
-
+Latency is measured by a round trip from producer to Broker and Broker to consumer.
 **command:**
 >./kafka-run-class.sh kafka.tools.EndToEndLatency {host}:{port} {topic} {#messages} {acks} {message-size}
 
