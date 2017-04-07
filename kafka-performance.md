@@ -50,7 +50,8 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **command:**
 ```
-./kafka-producer-perf-test.sh --broker-list={host}:{port} --messages {#messages} --topic {topic_name} --message-size {message-size} --batch-size {batch-size} --compression-codec {compression-codec}
+./kafka-producer-perf-test.sh --broker-list={host}:{port} --messages {#messages} --topic {topic_name}
+ --message-size {message-size} --batch-size {batch-size} --compression-codec {compression-codec}
 ```
 **example:**
 ```
