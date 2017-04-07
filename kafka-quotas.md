@@ -31,7 +31,7 @@ More details: <br>
 
 #### Set default quotas:
 To set for all clients or users default quotas. <br>
-**command:** kafka-configs --zookeeper localhost:2181 --alter --add-config 'producer_byte_rate=1024, consumer_byte_rate=2048' --entity-type {entity-type} --entity-default<br>
+**command:** kafka-configs --zookeeper localhost:2181 --alter --add-config 'producer_byte_rate= {rate}, consumer_byte_rate={rate}' --entity-type {entity-type} --entity-default<br>
 **example:** kafka-configs --zookeeper localhost:2181 --alter --add-config 'producer_byte_rate=1024, consumer_byte_rate=2048' --entity-type clients --entity-default<br>
 
 **options:** <br>
@@ -60,6 +60,6 @@ TODO
   *--entity-type users*		 			 
   *--entity-name {specific_user_name} #Optional*
 
-  Use entity-type clients to list all or a specific client <br>
+  Use entity-type **clients** to list all or a specific client <br>
   *--entity-type clients*
   *--entity-name specific_client_id #Optional*
