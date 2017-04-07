@@ -55,6 +55,7 @@ time,  data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec
 
 **example:**
 >./kafka-producer-perf-test.sh --broker-list=localhost:9092 --messages 10000000 --topic topic_name --message-size 1000 --batch-size 100 --compression-codec 1
+
 **expected result:**
 ```
 start.time, 	 			end.time, compression, message.size, batch.size, total.data.sent.in.MB, MB.sec, total.data.sent.in.nMsg,   nMsg.sec
@@ -69,6 +70,7 @@ start.time, 	 			end.time, compression, message.size, batch.size, total.data.sen
 
 **example:**
 >./kafka-run-class.sh kafka.tools.EndToEndLatency localhost:9092 topic_name 1000 all 400
+
 **expected result:**
 ```
 
