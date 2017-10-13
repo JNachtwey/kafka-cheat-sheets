@@ -1,4 +1,4 @@
-## Authorization with Access Control Lists##
+## Authorization with Access Control Lists ##
 
 Summary for ACLs based on [Apache Kafka Docu](https://kafka.apache.org/documentation/#security_authz)
 To activate ACLS set in server.properties:
@@ -31,12 +31,12 @@ The *super user* is set in server.properties:
 
 *Recommendation:* Set ACls for Topics to allow on Principal base the Operations.
 
-### Basic ACL Commands###
+### Basic ACL Commands ###
 
-#### List active ACLS####
+#### List active ACLS ####
 kafka-topics --list --zookeeper localhost:2181
 
-#### Adding Consumer or Producer####
+#### Adding Consumer or Producer ####
 use: --producer or --consumer
 
 example:kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --add --allow-principal User:jnachtwey *--producer* --topic mytopic
@@ -56,7 +56,7 @@ Current ACLs for resource `Topic:mytopic`:
 Disadvantage: Producer comes with CREATE rights. (Could create Topics) //TODO hebelt das autocreation aus?
 Take Care: --produce will have "Create Rights". Better is to use not Con
 
-#### Adding selected Rights####
+#### Adding selected Rights ####
 
 
 
@@ -72,7 +72,7 @@ Adding ACLs for resource `Cluster:kafka-cluster`:
 Current ACLs for resource `Topic:mytopic`:
         User:jnachtwey has Allow permission for operations: Write from hosts: *
         User:jnachtwey has Allow permission for operations: Describe from hosts: *
-#### Remove####
+#### Remove ####
 use: --remove
 
 example: kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --add --allow-principal User:jnachtwey --producer --topic mytopic
