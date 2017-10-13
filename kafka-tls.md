@@ -6,8 +6,8 @@ TLSv1.2
 
 **server.properties**
 
-ssl.tls.version: TLSv1.2
-ssl.secure.random.implementation: NativePRNG
+>ssl.tls.version: TLSv1.2 </BR>
+ssl.secure.random.implementation: NativePRNG </BR>
 ssl.cipher.suites:
 
 
@@ -18,4 +18,9 @@ https://security.stackexchange.com/questions/145855/how-to-enforce-perfect-forwa
 </sup>
 
 **Remark**
-The TLS version and cipher are also restrictable with java.security policy. The file is usually located under jre/lib/security/java.security. Adjust the jdk.tls.disabledAlgorithms property.  jre/lib/security/java.security. Adjust the jdk.tls.disabledAlgorithms property.
+
+The TLS version and cipher are also restrictable with java.security policy. The file is usually located under:
+
+jre/lib/security/java.security. </BR>
+Adjust the jdk.tls.disabledAlgorithms property. </BR> jre/lib/security/java.security. </BR>
+Adjust the jdk.tls.disabledAlgorithms property.
