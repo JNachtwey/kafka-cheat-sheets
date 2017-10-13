@@ -4,11 +4,7 @@ Date: Oktober 2017 </BR>
 Without warranty!
 
 **TLS version:**</BR>
-Use only TLS 1.2.
-<sup>based on source:</BR>
-
-
-</sup>
+Use only TLS 1.2. </BR>
 
 **Secured ciphers recommendation:**
 >TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 </BR>
@@ -36,16 +32,12 @@ TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256</BR>
 TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256</BR>
 TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</BR>
 
-<sup>based on source:
-
-
-</sup>
-
 **Random implementation**
 
-<sup>based on source:</BR>
-
-
+<sup>based on sources:</BR>
+https://security.stackexchange.com/questions/120347/how-to-disable-weak-cipher-suits-in-java-application-server-for-ssl
+https://crypto.stackexchange.com/questions/19985/can-dh-anon-really-be-exploited-by-an-attacker
+https://security.stackexchange.com/questions/145855/how-to-enforce-perfect-forward-secrecy-using-jvm-properties
 </sup>
 
 **server.properties**
@@ -53,12 +45,6 @@ TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</BR>
 ssl.secure.random.implementation: NativePRNG </BR>
 ssl.cipher.suites:TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 
-
-<sup>source: </BR>
-https://security.stackexchange.com/questions/120347/how-to-disable-weak-cipher-suits-in-java-application-server-for-ssl
-https://crypto.stackexchange.com/questions/19985/can-dh-anon-really-be-exploited-by-an-attacker
-https://security.stackexchange.com/questions/145855/how-to-enforce-perfect-forward-secrecy-using-jvm-properties
-</sup>
 
 **Remark**
 
@@ -70,3 +56,6 @@ Adjust the jdk.tls.disabledAlgorithms property. </BR>
 > jre/lib/security/java.security.
 
 Adjust the jdk.tls.disabledAlgorithms property.
+<sup>source: </BR>
+
+</sup>
