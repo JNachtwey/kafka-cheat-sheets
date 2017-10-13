@@ -10,8 +10,8 @@ Use only TLS 1.2.
 
 </sup>
 
-**Secured ciphers recommendation:** </BR>
-TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+**Secured ciphers recommendation:**
+>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
 TLS_RSA_WITH_AES_256_CBC_SHA256
 TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
@@ -42,6 +42,7 @@ TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 </sup>
 
 **Random implementation**
+
 <sup>based on source:
 
 
