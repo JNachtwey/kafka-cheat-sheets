@@ -12,10 +12,9 @@ Contains basic command lines commands for kafka.
 *[Kafka performance](https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-performance.md)*
 Contains command lines commands for kafka performance testing.
 
-*[Kafka ACLs]()*
+*[Kafka ACLs](https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-acls.md)*
 Contains command lines commands for kafka ACLs.
-https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-acls.md
 
-*[Kafka Quotas]()*
+
+*[Kafka Quotas](https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-quotas.md)*
 Contains command lines commands for kafka Quotas.
-https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-quotas.md
