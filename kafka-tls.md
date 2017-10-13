@@ -55,7 +55,7 @@ The TLS version and cipher are also restrictable with java.security policy. The 
 Adjust the jdk.tls.disabledAlgorithms property. </BR>
 > jre/lib/security/java.security.
 
-Adjust the jdk.tls.disabledAlgorithms property.
+Adjust the jdk.tls.disabledAlgorithms property. </BR>
 <sup>source: </BR>
 
 </sup>

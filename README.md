@@ -18,3 +18,6 @@ Contains command lines commands for kafka ACLs.
 
 *[Kafka Quotas](https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-quotas.md)*
 Contains command lines commands for kafka Quotas.
+
+*[Kafka TLS](https://github.com/JNachtwey/kafka-cheat-sheets/blob/master/kafka-tls.md)*
+Recommendations for secured TLS connections
