@@ -1,0 +1,16 @@
+
+DEV
+
+./bin/kafka-run-class.sh kafka.tools.ReplayLogProducer --sync --broker-list .corp.int:9093 --inputtopic inputTpoic --outputtopic topic --zookeeper localhost:2181
+
+
+./bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list .corp.int:6667 --topic topic --time -1 --offsets 1  | awk -F  ":" '{sum += $3} END {print sum}'
+
+
+
+
+
+https://cwiki.apache.org/confluence/display/KAFKA/System+Tools#SystemTools-ReplayLogProducer
+Simple Consumer Shell
+
+

@@ -1,6 +1,6 @@
 ### advanced Kafka security recommendations for TLS connections ###
 
-Date: Oktober 2017 </BR>
+Date: October 2017 </BR>
 Without warranty!
 
 **TLS version:**</BR>

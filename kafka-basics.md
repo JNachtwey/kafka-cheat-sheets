@@ -49,11 +49,6 @@ topic_name
 **example:**
 > ./kafka-topics.sh --zookeeper localhost:2181 --delete --topic topic_name
 
-**expected result:**
-```
-
-```
-
 ## Describe a topic ##
 
 **command:**
@@ -88,10 +83,6 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 **options:** If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
 									  : --consumer.config ./config/client-security.properties // See below for client-security.properties <br>
 									    --from-beginning //read all messages from beginning
-**expected result:** <br>
-```
-
-```
 
 ## Consolen producer ##
 
@@ -104,10 +95,6 @@ Topic:topic_name   PartitionCount:10       ReplicationFactor:1     Configs:
 **options:**
 If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} xor {SSL} else: default {PLAINTEXT} <br>
 							          : --producer.config ./config/producer.properties // See below for client-security.properties <br>
-**expected result:** <br>
-```{put your messages hier and return}
-
-```
 
 ## Show active consumer groups ##
 
@@ -119,7 +106,7 @@ If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} x
 
 **expected result:** <br>
 ```
-
+consumer-group
 ```
 
 ## Show current active consumer offset and consumer LAG ##
@@ -131,17 +118,6 @@ If security is active use: --security-protocol {SASL_SSL} xor {SASL_PLAINTEXT} x
 >./kafka-run-class.sh kafka.admin.ConsumerGroupCommand --describe --new-consumer --bootstrap-server localhost:9092 --group group_name
 
 **expected result:** <br>
-```
-
-```
-
-## Show internal topic ##
-
-**command:**
->
-**example:**
->
-**expected result:**
 ```
 
 ```
