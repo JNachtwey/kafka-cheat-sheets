@@ -34,7 +34,7 @@ The *super user* is set in server.properties:
 ### Basic ACL Commands ###
 
 #### List active ACLS ####
-kafka-topics --list --zookeeper localhost:2181
+bin/kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --list --topic test-topic
 
 #### Adding Consumer or Producer ####
 use: --producer or --consumer
